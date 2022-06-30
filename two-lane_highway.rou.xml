@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<routes>
+    <vType id="type1" accel="0.73" decel="1.67" sigma="0" length="5"  minGap = "2" maxSpeed="23" carFollowModel = "EIDM"/>
+
+    <flow id = "veh0" begin="0" end= "7200" period="4" type="type1" deaprtLane = "0" departSpeed = "max" arrivalLane = "0">
+        <route id="route00"  edges="middle" />
+    </flow>
+
+    <flow id = "veh1" begin="0" end= "7200" period="4" type="type1" departLane = "1" departSpeed = "max" arrivalLane = "1">
+        <route id="route11"  edges="middle" />
+    </flow>
+</routes>

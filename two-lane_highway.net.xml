@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2022-06-30 00:26:04 by Eclipse SUMO netedit Version 1.13.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\Users\public.DESKTOP-U6AL25N\Desktop\yysumo\the_expression_of_distress.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="C:\Users\public.DESKTOP-U6AL25N\Desktop\yysumo\the_expression_of_distress.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-internal-links value="true"/>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<net version="1.9" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-281.50,13.16,653.87,13.18" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id="middle" from="J7" to="J12" priority="-1" length="1000.00">
+        <lane id="middle_0" index="0" speed="23.00" length="1000.00" acceleration="1" shape="-281.50,8.38 653.87,8.36"/>
+        <lane id="middle_1" index="1" speed="23.00" length="1000.00" shape="-281.50,11.58 653.87,11.56"/>
+    </edge>
+
+    <junction id="J12" type="dead_end" x="653.87" y="13.16" incLanes="middle_0 middle_1" intLanes="" shape="653.87,6.76 653.87,13.16"/>
+    <junction id="J7" type="dead_end" x="-281.50" y="13.18" incLanes="" intLanes="" shape="-281.50,13.18 -281.50,6.78"/>
+
+</net>
