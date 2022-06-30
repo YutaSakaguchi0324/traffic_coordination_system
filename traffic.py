@@ -36,11 +36,11 @@ traffic_settings = {
     'T': 6, # [-] 最適化する時間ステップ区間 ホライゾン
     'N': 2, # [-] １つの部分最適化の車の数
     'starting_line_position': 200, # [m]　最適化を行う道路の範囲　スタートライン
-    'goal_line_position': 870, # [m] 最適化を行う道路の範囲　ゴールライン
+    'goal_line_position': 800, # [m] 最適化を行う道路の範囲　ゴールライン
     'alpha': 0.0005, # [-] 衝突リスク定数
     'w1': 0.01, # [-] 重み付け
     'w2': 0.1, # [-] 重み付け
-    'w3': 1, # [-] 重み付け
+    'w3': 2, # [-] 重み付け
     }
 
 class TrafficCoordinationSystem:
@@ -66,7 +66,7 @@ class TrafficCoordinationSystem:
     def start(self):
         #SUMOの起動
         sumoBinary = checkBinary('sumo-gui')
-        sumoCmd = [sumoBinary, "-c", "the_expression_of_distress.sumocfg"]
+        sumoCmd = [sumoBinary, "-c", "two-lane_highway.sumocfg"]
         #traciの開始
         traci.start(sumoCmd)
 

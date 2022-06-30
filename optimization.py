@@ -218,7 +218,7 @@ class PartialOptimizer:
                           method = 'SLSQP',
                           constraints = [acceleration_constraints, carfollowing_constraints],
                           bounds = Bounds(self.lower_bounds, self.upper_bounds),
-                          options = {"disp":False,"maxiter":10000}
+                          options = {"disp":False,"maxiter":10}
                           )
         if RESULT.success == False:
             print(f'optimize={RESULT.success}')
