@@ -47,5 +47,11 @@ document.pdf参照
 SUMOにはpython用のインターフェース(TraCI)が存在し、交通調整システムをpythonで構築することで実験環境を作れる。
 
 # 実験結果
+最適化をしない場合
 
+
+
+最適化した場合
+
+https://user-images.githubusercontent.com/108399244/176835032-5f443ed5-7c5c-4cab-94d0-6afe4496b5b6.mp4
 
