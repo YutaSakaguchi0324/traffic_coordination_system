@@ -58,13 +58,13 @@ SUMOにはpython用のインターフェース(TraCI)が存在し、交通調整
 
 緑色の三角形が車線変更する予定のある車、黄色の三角形が車線変更する予定のない車である。
 
-### *最適化をしない*場合
+- 最適化をしない場合
 
 https://user-images.githubusercontent.com/108399244/176835689-bb255541-6a08-48b0-8fa3-befeacbd04ce.mp4
 
 車線変更の予定がある車(緑色の三角形)の横に十分なスペースが無く、車線変更が難しい。
 
-### *最適化した*場合
+- 最適化した場合
 
 https://user-images.githubusercontent.com/108399244/176835032-5f443ed5-7c5c-4cab-94d0-6afe4496b5b6.mp4
 
