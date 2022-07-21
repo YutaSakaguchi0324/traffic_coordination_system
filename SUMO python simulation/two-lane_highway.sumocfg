@@ -1,0 +1,14 @@
+<configuration>
+   <input>
+       <net-file value="two-lane_highway.net.xml"/>
+       <route-files value="two-lane_highway.rou.xml"/>
+   </input>
+
+   <time>
+       <step-length value="0.5"/> 
+   </time>
+
+   <processing>
+       <lateral-resolution value="1." />
+   </processing>
+</configuration>
