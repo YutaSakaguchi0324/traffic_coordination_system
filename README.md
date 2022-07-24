@@ -48,7 +48,7 @@
 ### 最適化したい変数
 
 ### 目的関数
-$$ f_{cost}=f_{average velocity} + f_{fuel_consumption} + f_{lane-change risk} $$
+$$ f_{cost}=f_1 + f_2 + f_3 $$
 $$ f_{cost}=\sum_{h=1}^H  \sum_{n\in\mathcal{N}} w_1(v_n(t)-v_{des})^2 + \sum_{h=1}^H  \sum_{n\in\mathcal{N}} w_2a_n^2(t)  + 
 \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3(\theta_p + \theta_q)e^{-\alpha(x_p(t)-x_q(t))^2} $$
 
