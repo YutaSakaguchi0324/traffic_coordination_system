@@ -48,7 +48,7 @@
 ### 最適化したい変数
 
 ### 目的関数
-\leftline{$$ minimize\ f_{cost}=f_1 + f_2 + f_3 $$}
+$$ \leftline{minimize\ f_{cost}=f_1 + f_2 + f_3} $$
 
 $$ f_1=\sum_{h=1}^H \sum_{n\in\mathcal{N}} w_1(v_n(t)-v_{des})^2 $$
 
