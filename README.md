@@ -47,8 +47,8 @@
 
 ### 最適化したい変数
 $$ f_{cost}=\sum_{h=1}^H  \sum_{n\in\mathcal{N}} (w_1(v_n(t)-v_{des})^2
-w_2a_n^2(t).\\
-+ \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3(\theta_p + \left.\theta_q)e^{-\alpha(x_p(t)-x_q(t))^2} \},
+w_2a_n^2(t)
++ \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3(\theta_p + \theta_q)e^{-\alpha(x_p(t)-x_q(t))^2} \},
 $$
 
 ### 目的関数
