@@ -46,6 +46,17 @@
 ## 最適化の数理モデル
 詳しくはdocument.pdf参照
 
+### 最適化したい変数
+\begin{align} \nonumber
+f_{\rm cost}&=\sum_{h=1}^H \left\{\sum_{n\in\mathcal{N}} \left(w_1(v_n(t)-v_{\rm  des})^2+
+w_2a_n^2(t)\right)\right.\\
+&+\sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3(\theta_p + \left.\theta_q)e^{-\alpha(x_p(t)-x_q(t))^2} \right\},
+\end{align}
+
+### 目的関数
+
+### 制約条件
+
 ## pythonで最適交通調整システムを構築する
 論文にはMATLABによる数値シミュレーションの結果が載っているが、実用化にはより多くのパターンと
 現実の車との相互作用を伴う実験が必要である。
