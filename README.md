@@ -46,7 +46,8 @@
 ## 最適化の数理モデル
 
 ### 最適化したい変数
-$$ f_{\rm cost}&=\sum_{h=1}^H \left\{\sum_{n\in\mathcal{N}} \left(w_1(v_n(t)-v_{\rm  des})^2 $$
+$$ f_{\rm cost} =\sum_{h=1}^H \left\{\sum_{n\in\mathcal{N}} \left(w_1(v_n(t)-v_{\rm  des})^2 $$
+
 ### 目的関数
 
 ### 制約条件
