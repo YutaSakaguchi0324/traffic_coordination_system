@@ -52,7 +52,7 @@ $$ minimize\ f_{cost}=f_1 + f_2 + f_3 $$
 
 $$ f_1=\sum_{h=1}^H \sum_{n\in\mathcal{N}} w_1(v_n(t)-v_{des})^2 $$
 
-<img src="https://latex.codecogs.com/svg.image?f_1&space;=&space;\sum_{h=1}^{H}&space;\sum_{n\in\mathcal{N}}&space;w_1&space;(v_n(t)&space;-&space;v_{\rm&space;des})^2"\>
+<img src="https://latex.codecogs.com/svg.image?f_1&space;=&space;\sum_{h=1}^{H}&space;\sum_{n\in\mathcal{N}}&space;w_1&space;(v_n(t)&space;-&space;v_{\rm&space;des})^2" \>
 
 $$ f_2=\sum_{h=1}^H \sum_{n\in\mathcal{N}} w_2a_n^2(t) $$
 
