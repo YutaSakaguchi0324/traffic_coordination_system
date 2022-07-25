@@ -65,10 +65,10 @@
 <!-- t = t_0 + h \Delta t -->
 
 ### 制約条件
-<img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t&plus;\Delta&space;t)&space;=&space;x_n(t)&space;&plus;&space;v_n(t)\Delta&space;t,&space;" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t&plus;\Delta&space;t)&space;=&space;x_n(t)&space;&plus;&space;v_n(t)\Delta&space;t" />
 <!-- x_n(t+\Delta t) = x_n(t) + v_n(t)\Delta t, -->
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;v_n(t&plus;\Delta&space;t)&space;=&space;v_n(t)&space;&plus;&space;a_n(t)\Delta&space;t,&space;" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;v_n(t&plus;\Delta&space;t)&space;=&space;v_n(t)&space;&plus;&space;a_n(t)\Delta&space;t" />
 <!-- v_n(t+\Delta t) = v_n(t) + a_n(t)\Delta t, -->
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;v_{\rm&space;min}&space;\leq&space;v_n(t)&space;\leq&space;v_{\rm&space;max}&space;&space;" />
