@@ -48,7 +48,7 @@
 ### 最適化したい変数
 
 ### 目的関数
-最適化の目的は、各々の車の速度と加速度の偏差を最小限に抑えながら、車線変更する車に十分な車間距離を作ることである。
+最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
 具体的には、以下のように定式化される。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;minimize}\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3">
@@ -66,7 +66,19 @@
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t&space;=&space;t_0&space;&plus;&space;h&space;\Delta&space;t" />
 <!-- t = t_0 + h \Delta t -->
 
-ここで、$f_1$は速度評価関数、$f_2$は加速度評価関数、$f_3$は車線変更リスク評価関数である。
+ここで、$f_1$は速度評価関数、$f_2$は燃費評価関数、$f_3$は車線変更リスク評価関数である。
+
+$f_1$は速度$v_n$が理想速度$v_{\rm des}$から離れるほど値が大きくなる。
+
+理想速度から離れるほど渋滞を意味するので、交通の円滑さを評価できる。
+
+$f_2$は速度変化が大きく加減速が多いほど値が大きくなる。
+
+車の燃費は加減速を繰り返すほど悪くなるため、加速度の分散で燃費を評価できる
+
+$f_3$は車線変更する車とそれ以外の車の車間距離が開くほど値が小さくなることを意味する。
+
+車線変更の危険度が横の車との車間距離の正規分布に従うと仮定して評価している。
 
 ### 制約条件
 <img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t&plus;\Delta&space;t)&space;=&space;x_n(t)&space;&plus;&space;v_n(t)\Delta&space;t" />
