@@ -53,7 +53,7 @@
 
 <img src="https://latex.codecogs.com/svg.image?f_1&space;=&space;\sum_{h=1}^{H}&space;\sum_{n\in\mathcal{N}}&space;w_1&space;(v_n(t)&space;-&space;v_{\rm&space;des})^2" />
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;f_2&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}&space;a_n(t)" />
+<\img src="https://latex.codecogs.com/svg.image?\large&space;f_2&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}&space;w_2&space;a_n^2(t)" />
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}w_3(\theta_p&space;&plus;&space;\theta_q)&space;e^{-\alpha(x_p(t)-x_q(t))^2}" />
 
