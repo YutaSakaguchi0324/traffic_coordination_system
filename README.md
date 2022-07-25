@@ -55,7 +55,9 @@
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_2&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}&space;w_2&space;\cdot&space;a_n^2(t)" />
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}w_3(\theta_p&space;&plus;&space;\theta_q)&space;e^{-\alpha(x_p(t)-x_q(t))^2}" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}&space;w_3&space;\cdot&space;(\theta_p&space;\vee&space;\theta_q)&space;e^{-\alpha(x_p(t)&space;-&space;x_q(t))^2}" />
+
+[](f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3 \cdot (\theta_p \vee \theta_q) e^{-\alpha(x_p(t) - x_q(t))^2})
 
 ### 制約条件
 
