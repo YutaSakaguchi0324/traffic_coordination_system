@@ -77,12 +77,24 @@
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;min}&space;\leq&space;a_n(t)&space;\leq&space;&space;a_{\rm&space;max}&space;" />
 <!-- a_{\rm min} \leq a_n(t) \leq  a_{\rm max} -->
 
+<img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;=&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
+<!-- a_f = a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;cfm}&space;=&space;a_{\rm&space;max}\left&space;(&space;1&space;-&space;\left(\frac{v_f}{v_{\rm&space;des}}&space;\right)^4&space;-&space;\left(\frac{s}{g}\right)^2&space;\right&space;)," />
+<!-- a_{\rm cfm} = a_{\rm max}\left ( 1 - \left(\frac{v_f}{v_{\rm des}} \right)^4 - \left(\frac{s}{g}\right)^2 \right ), -->
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;g&space;=&space;x_l&space;-&space;x_f&space;-&space;l," />
+<!-- g = x_l - x_f - l, -->
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;s&space;=&space;g_{\rm&space;min}&space;&plus;&space;v_f&space;T&space;&plus;&space;\frac{v_f(v_f&space;-&space;v_l)}{2\sqrt{|a_{\rm&space;max}&space;a_{\rm&space;min}}|}," />
+<!-- s = g_{\rm min} + v_f T + \frac{v_f(v_f - v_l)}{2\sqrt{|a_{\rm max} a_{\rm min}}|}, -->
+
 ## pythonで最適交通調整システムを構築する
 論文にはMATLABによる数値シミュレーションの結果が載せているが、実用化にはより多くのパターンと
 現実の車との相互作用を伴う実験が必要である。
 
 現実の車を使って実験することは不可能なので、代わりに交通シミュレータSUMOを用いてシミュレーション上の車で実験する。
-SUMOにはpython用のインターフェース(TraCI)が存在し、交通調整システムをpythonで構築することで実験環境を作れる。
+SUMOにはpython用のインターフェース(TraCI)が存在し、交通調整システムをpythonで構築することで実験環境を作る。
 
 ## 実験結果
 次の動画は交通シミュレータ上の車を最適化させた様子である。比較のため、最適化しない場合も載せた。
