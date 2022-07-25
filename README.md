@@ -52,7 +52,7 @@
 
 従って、平均速度・燃費・車線変更の3つの評価軸の和を目的関数とする。
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;minimize}\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3" />
 
 ここで、$f_1$は速度評価関数、$f_2$は燃費評価関数、$f_3$は車線変更リスク評価関数である。
 
