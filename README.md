@@ -64,8 +64,20 @@
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t&space;=&space;t_0&space;&plus;&space;h&space;\Delta&space;t" />
 <!-- t = t_0 + h \Delta t -->
 
-### 制約条件
+<img src="https://latex.codecogs.com/svg.image?\large&space;v_{\rm&space;min}&space;\leq&space;v_n(t)&space;\leq&space;v_{\rm&space;max}&space;&space;" />
+<!-- v_{\rm min} \leq v_n(t) \leq v_{\rm max}  -->
 
+<img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;min}&space;\leq&space;a_n(t)&space;\leq&space;&space;a_{\rm&space;max}&space;" />
+<!-- a_{\rm min} \leq a_n(t) \leq  a_{\rm max} -->
+
+### 制約条件
+<img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t&plus;\Delta&space;t)&space;=&space;x_n(t)&space;&plus;&space;v_n(t)\Delta&space;t,&space;" />
+<!-- x_n(t+\Delta t) = x_n(t) + v_n(t)\Delta t, -->
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;v_n(t&plus;\Delta&space;t)&space;=&space;v_n(t)&space;&plus;&space;a_n(t)\Delta&space;t,&space;" />
+<!-- v_n(t+\Delta t) = v_n(t) + a_n(t)\Delta t, -->
+
+<img src="" />
 ## pythonで最適交通調整システムを構築する
 論文にはMATLABによる数値シミュレーションの結果が載せているが、実用化にはより多くのパターンと
 現実の車との相互作用を伴う実験が必要である。
