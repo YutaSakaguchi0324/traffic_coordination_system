@@ -51,10 +51,9 @@
 最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
 従って、平均速度・燃費・車線変更の3つの評価軸の和を目的関数とする。
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;f_{\rm&space;cost}&space;=&space;f_{\rm&space;av}&space;&plus;&space;f_{\rm&space;fc}&space;&plus;&space;f_{\rm&space;lr}&space;">
-<!-- {\rm minimize}\ f_{\rm cost} = f_1 + f_2 + f_3 -->
+<img src="https://latex.codecogs.com/png.image?\dpi{300}f_{\rm&space;cost}&space;=&space;f_{\rm&space;av}&space;&plus;&space;f_{\rm&space;fc}&space;&plus;&space;f_{\rm&space;lr}&space;" />
 
-ここで、$f_1$は速度評価関数、$f_2$は燃費評価関数、$f_3$は車線変更リスク評価関数である。
+ここで、$f_{\rm av}$は速度評価関数、$f_{\rm fc}$は燃費評価関数、$f_{\rm lr}$は車線変更リスク評価関数である。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_1&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}&space;w_1&space;\cdot&space;(v_n(t)&space;-&space;v_{\rm&space;des})^2" />
 <!-- f_1 = \sum_{h=1}^H \sum_{n\in\mathcal{N}} w_1 \cdot (v_n(t) - v_{\rm des})^2 -->
