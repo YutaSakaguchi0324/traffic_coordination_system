@@ -52,13 +52,13 @@
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;minimize}\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3">
 <!-- {\rm minimize}\ f_{\rm cost} = f_1 + f_2 + f_3 -->
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;f_1&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}&space;w_1&space;\cdot&space;(v_n(t)&space;-&space;v_{\rm&space;des})^2," />
+<img src="https://latex.codecogs.com/svg.image?\large&space;f_1&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}&space;w_1&space;\cdot&space;(v_n(t)&space;-&space;v_{\rm&space;des})^2" />
 <!-- f_1 = \sum_{h=1}^H \sum_{n\in\mathcal{N}} w_1 \cdot (v_n(t) - v_{\rm des})^2 -->
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;f_2&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}&space;w_2&space;\cdot&space;a_n^2(t)," />
+<img src="https://latex.codecogs.com/svg.image?\large&space;f_2&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}&space;w_2&space;\cdot&space;a_n^2(t)" />
 <!-- f_2 = \sum_{h=1}^H \sum_{n\in\mathcal{N}} w_2 \cdot a_n^2(t) -->
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}&space;w_3&space;\cdot&space;(\theta_p&space;\vee&space;\theta_q)&space;e^{-\alpha(x_p(t)&space;-&space;x_q(t))^2}," />
+<img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}&space;w_3&space;\cdot&space;(\theta_p&space;\vee&space;\theta_q)&space;e^{-\alpha(x_p(t)&space;-&space;x_q(t))^2}" />
 <!-- f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3 \cdot (\theta_p \vee \theta_q) e^{-\alpha(x_p(t) - x_q(t))^2} -->
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t&space;=&space;t_0&space;&plus;&space;h&space;\Delta&space;t" />
@@ -80,13 +80,13 @@
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;=&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
 <!-- a_f = a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;cfm}&space;=&space;a_{\rm&space;max}\left&space;(&space;1&space;-&space;\left(\frac{v_f}{v_{\rm&space;des}}&space;\right)^4&space;-&space;\left(\frac{s}{g}\right)^2&space;\right&space;)," />
+<img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;cfm}&space;=&space;a_{\rm&space;max}\left&space;(&space;1&space;-&space;\left(\frac{v_f}{v_{\rm&space;des}}&space;\right)^4&space;-&space;\left(\frac{s}{g}\right)^2&space;\right&space;)" />
 <!-- a_{\rm cfm} = a_{\rm max}\left ( 1 - \left(\frac{v_f}{v_{\rm des}} \right)^4 - \left(\frac{s}{g}\right)^2 \right ), -->
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;g&space;=&space;x_l&space;-&space;x_f&space;-&space;l," />
+<img src="https://latex.codecogs.com/svg.image?\large&space;g&space;=&space;x_l&space;-&space;x_f&space;-&space;l" />
 <!-- g = x_l - x_f - l, -->
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;s&space;=&space;g_{\rm&space;min}&space;&plus;&space;v_f&space;T&space;&plus;&space;\frac{v_f(v_f&space;-&space;v_l)}{2\sqrt{|a_{\rm&space;max}&space;a_{\rm&space;min}}|}," />
+<img src="https://latex.codecogs.com/svg.image?\large&space;s&space;=&space;g_{\rm&space;min}&space;&plus;&space;v_f&space;T&space;&plus;&space;\frac{v_f(v_f&space;-&space;v_l)}{2\sqrt{|a_{\rm&space;max}&space;a_{\rm&space;min}}|}" />
 <!-- s = g_{\rm min} + v_f T + \frac{v_f(v_f - v_l)}{2\sqrt{|a_{\rm max} a_{\rm min}}|}, -->
 
 ## pythonで最適交通調整システムを構築する
