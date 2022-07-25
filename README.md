@@ -48,11 +48,8 @@
 ### 最適化したい変数
 
 ### 目的関数
-<img src="https://latex.codecogs.com/svg.image?minimize\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3" />
-
-<img src="https://latex.codecogs.com/svg.image?{\rm&space;Minimize}\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3" />
-
-<img src="https://latex.codecogs.com/svg.image?minimize\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3" />
+最小化
+<img src="https://latex.codecogs.com/svg.image?f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3" />
 
 $$ f_1=\sum_{h=1}^H \sum_{n\in\mathcal{N}} w_1(v_n(t)-v_{des})^2 $$
 
