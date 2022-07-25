@@ -83,6 +83,7 @@ $f_3$は車線変更する車とそれ以外の車の車間距離が開くほど
 
 ### 制約条件
 - 運動条件
+
 $x_n,\ v_n,\ a_n$間の関係は以下の制約式で示される。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t&plus;\Delta&space;t)&space;=&space;x_n(t)&space;&plus;&space;v_n(t)\Delta&space;t" />
@@ -92,15 +93,18 @@ $x_n,\ v_n,\ a_n$間の関係は以下の制約式で示される。
 <!-- v_n(t+\Delta t) = v_n(t) + a_n(t)\Delta t, -->
 
 - 速度・加速度制限
+
 <img src="https://latex.codecogs.com/svg.image?\large&space;v_{\rm&space;min}&space;\leq&space;v_n(t)&space;\leq&space;v_{\rm&space;max}&space;&space;" />
 <!-- v_{\rm min} \leq v_n(t) \leq v_{\rm max}  -->
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;min}&space;\leq&space;a_n(t)&space;\leq&space;&space;a_{\rm&space;max}&space;" />
 <!-- a_{\rm min} \leq a_n(t) \leq  a_{\rm max} -->
 
-- 追従車制約
-<img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;=&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
-<!-- a_f = a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
+- 衝突回避制約
+
+前方車と衝突しないことを示す制約である。交通シミュレーションでは、前方車両の速度や車間距離から安全が確保できる速度を計算するモデルが存在する。
+<img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;\leq&space;&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
+<!-- a_f \leq  a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
 
 車追従モデルには様々なモデルがあるが、今回はIDM(intelligent driver model)というモデルを使った。
 
@@ -112,6 +116,8 @@ $x_n,\ v_n,\ a_n$間の関係は以下の制約式で示される。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;s&space;=&space;g_{\rm&space;min}&space;&plus;&space;v_f&space;T&space;&plus;&space;\frac{v_f(v_f&space;-&space;v_l)}{2\sqrt{|a_{\rm&space;max}&space;a_{\rm&space;min}}|}" />
 <!-- s = g_{\rm min} + v_f T + \frac{v_f(v_f - v_l)}{2\sqrt{|a_{\rm max} a_{\rm min}}|}, -->
+
+
 
 ## pythonで最適交通調整システムを構築する
 論文にはMATLABによる数値シミュレーションの結果が載せているが、実用化にはより多くのパターンと
