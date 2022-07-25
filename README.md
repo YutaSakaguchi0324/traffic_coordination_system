@@ -62,7 +62,8 @@
 <!-- f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3 \cdot (\theta_p \vee \theta_q) e^{-\alpha(x_p(t) - x_q(t))^2} -->
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;t&space;=&space;t_0&space;&plus;&space;h&space;\Delta&space;t" />
-<!-- -->
+<!-- t = t_0 + h \Delta t -->
+
 ### 制約条件
 
 ## pythonで最適交通調整システムを構築する
