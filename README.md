@@ -66,6 +66,8 @@
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t&space;=&space;t_0&space;&plus;&space;h&space;\Delta&space;t" />
 <!-- t = t_0 + h \Delta t -->
 
+ここで、$f_1$は速度評価関数、$f_2$は加速度評価関数、$f_3$は車線変更リスク評価関数である。
+
 ### 制約条件
 <img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t&plus;\Delta&space;t)&space;=&space;x_n(t)&space;&plus;&space;v_n(t)\Delta&space;t" />
 <!-- x_n(t+\Delta t) = x_n(t) + v_n(t)\Delta t, -->
