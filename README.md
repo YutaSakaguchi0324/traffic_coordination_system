@@ -49,11 +49,13 @@
 
 ### 目的関数
 最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
+
 従って、平均速度・燃費・車線変更の3つの評価軸の和を目的関数とする。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3" />
 
 ここで、$f_1$は速度評価関数、$f_2$は燃費評価関数、$f_3$は車線変更リスク評価関数である。
+
 $f_1,\ f_2,\ f_3$は具体的には以下のように定式化される。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_1&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}&space;w_1&space;\cdot&space;(v_n(t)&space;-&space;v_{\rm&space;des})^2" />
