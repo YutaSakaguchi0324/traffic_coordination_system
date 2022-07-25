@@ -70,6 +70,8 @@ $f_1,\ f_2,\ f_3$は具体的には以下のように定式化される。
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t&space;=&space;t_0&space;&plus;&space;h&space;\Delta&space;t" />
 <!-- t = t_0 + h \Delta t -->
 
+$\Delta t$は微小時間、$H$は時間ステップ数である。
+
 $f_1$は速度$v_n$が理想速度$v_{\rm des}$から離れるほど値が大きくなる。
 理想速度から離れるほど渋滞を意味するので、交通の円滑さを評価できる。
 
@@ -80,20 +82,27 @@ $f_3$は車線変更する車とそれ以外の車の車間距離が開くほど
 車線変更の危険度が横の車との車間距離の正規分布に従うと仮定して評価している。
 
 ### 制約条件
+- 運動条件
+$x_n,\ v_n,\ a_n$間の関係は以下の制約式で示される。
+
 <img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t&plus;\Delta&space;t)&space;=&space;x_n(t)&space;&plus;&space;v_n(t)\Delta&space;t" />
 <!-- x_n(t+\Delta t) = x_n(t) + v_n(t)\Delta t, -->
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;v_n(t&plus;\Delta&space;t)&space;=&space;v_n(t)&space;&plus;&space;a_n(t)\Delta&space;t" />
 <!-- v_n(t+\Delta t) = v_n(t) + a_n(t)\Delta t, -->
 
+- 速度・加速度制限
 <img src="https://latex.codecogs.com/svg.image?\large&space;v_{\rm&space;min}&space;\leq&space;v_n(t)&space;\leq&space;v_{\rm&space;max}&space;&space;" />
 <!-- v_{\rm min} \leq v_n(t) \leq v_{\rm max}  -->
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;min}&space;\leq&space;a_n(t)&space;\leq&space;&space;a_{\rm&space;max}&space;" />
 <!-- a_{\rm min} \leq a_n(t) \leq  a_{\rm max} -->
 
+-追従車制約
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;=&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
 <!-- a_f = a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
+
+車追従モデルには様々なモデルがあるが、今回はIDM(intelligent driver model)というモデルを使った。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;cfm}&space;=&space;a_{\rm&space;max}\left&space;(&space;1&space;-&space;\left(\frac{v_f}{v_{\rm&space;des}}&space;\right)^4&space;-&space;\left(\frac{s}{g}\right)^2&space;\right&space;)" />
 <!-- a_{\rm cfm} = a_{\rm max}\left ( 1 - \left(\frac{v_f}{v_{\rm des}} \right)^4 - \left(\frac{s}{g}\right)^2 \right ), -->
