@@ -52,7 +52,7 @@
 
 <img src="https://latex.codecogs.com/svg.image?{\rm&space;Minimize}\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3" />
 
-<img src="https://latex.codecogs.com/svg.image?\rm&space;Minimize\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3" />
+<img src="[https://latex.codecogs.com/svg.image?\rm&space;Minimize\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3](https://latex.codecogs.com/svg.image?minimize\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3)" />
 
 $$ f_1=\sum_{h=1}^H \sum_{n\in\mathcal{N}} w_1(v_n(t)-v_{des})^2 $$
 
