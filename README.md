@@ -59,12 +59,16 @@
 
 f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3 \cdot (\theta_p \vee \theta_q) e^{-\alpha(x_p(t) - x_q(t))^2}
 
-<!-- f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3 \cdot (\theta_p \vee \theta_q) e^{-\alpha(x_p(t) - x_q(t))^2} -->
+<!-- 
+
+f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3 \cdot (\theta_p \vee \theta_q) e^{-\alpha(x_p(t) - x_q(t))^2} 
+
+-->
 
 ### 制約条件
 
 ## pythonで最適交通調整システムを構築する
-論文にはMATLABによる数値シミュレーションの結果が載っているが、実用化にはより多くのパターンと
+論文にはMATLABによる数値シミュレーションの結果が載せているが、実用化にはより多くのパターンと
 現実の車との相互作用を伴う実験が必要である。
 
 現実の車を使って実験することは不可能なので、代わりに交通シミュレータSUMOを用いてシミュレーション上の車で実験する。
