@@ -57,7 +57,7 @@
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}&space;w_3&space;\cdot&space;(\theta_p&space;\vee&space;\theta_q)&space;e^{-\alpha(x_p(t)&space;-&space;x_q(t))^2}" />
 
-<!-- 1 -->
+<!-- f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3 \cdot (\theta_p \vee \theta_q) e^{-\alpha(x_p(t) - x_q(t))^2} -->
 
 ### 制約条件
 
