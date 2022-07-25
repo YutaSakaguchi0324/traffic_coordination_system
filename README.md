@@ -98,7 +98,7 @@ $x_n,\ v_n,\ a_n$間の関係は以下の制約式で示される。
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;min}&space;\leq&space;a_n(t)&space;\leq&space;&space;a_{\rm&space;max}&space;" />
 <!-- a_{\rm min} \leq a_n(t) \leq  a_{\rm max} -->
 
--追従車制約
+- 追従車制約
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;=&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
 <!-- a_f = a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
 
