@@ -48,6 +48,8 @@
 ### 最適化したい変数
 
 ### 目的関数
+最適化の目的は、各々の車の速度と加速度の偏差を最小限に抑えながら、車線変更する車に十分な車間距離を作ることである。
+具体的には、以下のように定式化される。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;minimize}\&space;f_{\rm&space;cost}&space;=&space;f_1&space;&plus;&space;f_2&space;&plus;&space;f_3">
 <!-- {\rm minimize}\ f_{\rm cost} = f_1 + f_2 + f_3 -->
