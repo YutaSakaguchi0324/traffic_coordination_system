@@ -46,7 +46,8 @@
 ## 最適化の数理モデル
 
 ### 最適化したい変数
-$x_n,\ v_n,\ a_n$
+最適化したい対象は時間経過に伴う車の動きである。よって運転は物体の運動としてモデル化でき、時間$t$に対する車の位置、速度、加速度で説明できる。
+$x_n(t),\ v_n(t),\ a_n(t)$
 
 
 ### 目的関数
@@ -86,7 +87,7 @@ $f_3$は車線変更する車とそれ以外の車の車間距離が開くほど
 ### 制約条件
 - 運動条件
 
-$x_n,\ v_n,\ a_n$間の関係は以下の制約式で示される。
+$x_n,\ v_n,\ a_n$の関係は以下の式に定式化される。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t&plus;\Delta&space;t)&space;=&space;x_n(t)&space;&plus;&space;v_n(t)\Delta&space;t" />
 <!-- x_n(t+\Delta t) = x_n(t) + v_n(t)\Delta t, -->
