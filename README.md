@@ -56,13 +56,7 @@
 
 しかし、これらの関数は連続量でありコンピュータで扱えないため、離散時間による時系列データに近似する。
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;X_n&space;=&space;(x_n,\&space;v_n,\&space;a_n)" />
-
-<img src="https://latex.codecogs.com/svg.image?\large&space;X&space;=&space;(X_1\&space;X_2\cdot&space;\cdot&space;\cdot&space;X_n)" />
-
 $x_n,\ v_n,\ a_n$はそれぞれ一台の車の位置、速度、加速度の時系列データである。
-
-$X_n$は車一台の時系列データであり、$X$は全体の時系列データである。
 
 ### 目的関数
 最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
