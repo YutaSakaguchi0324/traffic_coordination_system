@@ -47,7 +47,11 @@
 
 ### 最適化したい変数
 最適化したい対象は時間経過に伴う車の動きである。よって運転は物体の運動としてモデル化でき、時間$t$に対する車の位置、速度、加速度で説明できる。
-$x_n(t),\ v_n(t),\ a_n(t)$
+$x_n,\ v_n,\ a_n$はそれぞれ一台の車の位置、速度、加速度の時系列データである。
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;X_n&space;=&space;(x_n,\&space;v_n,\&space;a_n)" />
+
+<img src="https://latex.codecogs.com/svg.image?\large&space;X&space;=&space;(X_1\&space;X_2\cdot&space;\cdot&space;\cdot&space;X_n)" />
 
 
 ### 目的関数
