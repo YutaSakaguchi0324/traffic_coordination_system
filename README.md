@@ -102,9 +102,12 @@ $x_n,\ v_n,\ a_n$間の関係は以下の制約式で示される。
 
 - 衝突回避制約
 
-前方車と衝突しないことを示す制約である。交通シミュレーションでは、前方車両の速度や車間距離から安全が確保できる速度を計算するモデルが存在する。
+前方車と衝突しないことを示す制約である。
+
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;\leq&space;&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
 <!-- a_f \leq  a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
+
+交通シミュレーションでは、前方車両の速度や車間距離から安全が確保できる速度を計算するモデルが存在する。
 
 車追従モデルには様々なモデルがあるが、今回はIDM(intelligent driver model)というモデルを使った。
 
