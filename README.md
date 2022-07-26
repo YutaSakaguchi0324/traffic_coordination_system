@@ -51,8 +51,8 @@
 よって運転は物体の運動としてモデル化でき、時間$t$に対する車の位置、速度、加速度の関数で説明できる。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t),\&space;v_n(t),\&space;a_n(t),\&space;n\in&space;N" />
+$N$は最適化する車の集合
 
-ここで、$N$は最適化する車の集合である。
 しかし、これらの関数は連続量でありコンピュータで扱えないため、離散時間による時系列データに近似する。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;X_n&space;=&space;(x_n,\&space;v_n,\&space;a_n)" />
