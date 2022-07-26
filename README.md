@@ -46,6 +46,8 @@
 ## 最適化の数理モデル
 
 ### 最適化したい変数
+$x_n,\ v_n,\ a_n$
+
 
 ### 目的関数
 最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
@@ -102,12 +104,14 @@ $x_n,\ v_n,\ a_n$間の関係は以下の制約式で示される。
 
 - 衝突回避制約
 
-前方車と衝突しないことを示す制約である。
+先行車と衝突しないことを示す制約である。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;\leq&space;&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
 <!-- a_f \leq  a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
 
-交通シミュレーションでは、前方車両の速度や車間距離から安全が確保できる速度を計算するモデルが存在する。そのモデルで計算される速度以下であれば、前方車と衝突しないことが保証される。
+ここで、$x_l,\ v_l$は先行車の位置と速度、$x_f,\ v_f$はその追従車の位置と速度である。
+
+交通シミュレーションでは、先行車の速度や車間距離から安全が確保できる速度を計算するモデルが存在する。そのモデルで計算される速度以下であれば、前方車と衝突しないことが保証される。
 
 車追従モデルには様々なモデルがあるが、今回はIDM(intelligent driver model)というモデルを使った。
 
@@ -119,8 +123,6 @@ $x_n,\ v_n,\ a_n$間の関係は以下の制約式で示される。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;s&space;=&space;g_{\rm&space;min}&space;&plus;&space;v_f&space;T&space;&plus;&space;\frac{v_f(v_f&space;-&space;v_l)}{2\sqrt{|a_{\rm&space;max}&space;a_{\rm&space;min}}|}" />
 <!-- s = g_{\rm min} + v_f T + \frac{v_f(v_f - v_l)}{2\sqrt{|a_{\rm max} a_{\rm min}}|}, -->
-
-
 
 ## pythonで最適交通調整システムを構築する
 論文にはMATLABによる数値シミュレーションの結果が載せているが、実用化にはより多くのパターンと
