@@ -55,7 +55,7 @@
 
 しかし、これらの関数は連続量でありコンピュータで扱えないため、離散時間による時系列データに近似する。
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{x_n}=\begin{pmatrix}&space;x_n(t_0)\\&space;x_n(t_0&space;&plus;\Delta&space;t)\\&space;x_n(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x_n(t_0&plus;H\Delta&space;t)\end{pmatrix},\mathbf{v_n}=\begin{pmatrix}&space;v_n(t_0)\\&space;v_n(t_0&plus;\Delta&space;t)\\&space;v_n(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v_n(t_0&plus;H\Delta&space;t)\end{pmatrix}" /> <img src="https://latex.codecogs.com/svg.image?\large&space;,\&space;\mathbf{a_n}=\begin{pmatrix}&space;a_n(t_0)\\&space;a_n(t_0&plus;\Delta&space;t)\\&space;a_n(t_0&plus;2\Delta&space;t)\\&space;\\&space;a_n(t_0&plus;H\Delta&space;t)\end{pmatrix},&space;n\in&space;\mathcal{N}&space;" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{x_n}=\begin{pmatrix}&space;x_n(t_0)\\&space;x_n(t_0&space;&plus;\Delta&space;t)\\&space;x_n(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x_n(t_0&plus;H\Delta&space;t)\end{pmatrix},\mathbf{v_n}=\begin{pmatrix}&space;v_n(t_0)\\&space;v_n(t_0&plus;\Delta&space;t)\\&space;v_n(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v_n(t_0&plus;H\Delta&space;t)\end{pmatrix}" /> <img src="https://latex.codecogs.com/svg.image?\large&space;,\&space;\mathbf{a_n}=\begin{pmatrix}&space;a_n(t_0)\\&space;a_n(t_0&plus;\Delta&space;t)\\&space;a_n(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a_n(t_0&plus;H\Delta&space;t)\end{pmatrix},\&space;n\in\mathcal{N}&space;" />
 <!-- 
 \mathbf{x_n}=
 \begin{pmatrix}
