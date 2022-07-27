@@ -55,23 +55,23 @@
 
 しかし、これらの関数は連続量でありコンピュータで扱えないため、離散時間による時系列データに近似する。
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{x_n}&space;=&space;\begin{pmatrix}&space;x(t_0)\\&space;x(t_0&space;&plus;\Delta&space;t)\\&space;x(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x(t_0&plus;H\Delta&space;t)\end{pmatrix},\&space;\mathbf{v_n}=\begin{pmatrix}&space;v(t_0)\\&space;v(t_0&plus;\Delta&space;t)\\&space;v(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v(t_0&plus;H\Delta&space;t)\end{pmatrix}" /> <img src="https://latex.codecogs.com/svg.image?\large&space;,a_n=\begin{pmatrix}&space;a(t_0)\\&space;a(t_0&plus;\Delta&space;t)\\&space;a(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a(t_0&plus;H\Delta&space;t)\end{pmatrix}&space;,n&space;\in&space;N" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{x_n}=\begin{pmatrix}&space;x_n(t_0)\\&space;x_n(t_0&space;&plus;\Delta&space;t)\\&space;x_n(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x_n(t_0&plus;H\Delta&space;t)\end{pmatrix},\mathbf{v_n}=\begin{pmatrix}&space;v_n(t_0)\\&space;v_n(t_0&plus;\Delta&space;t)\\&space;v_n(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v_n(t_0&plus;H\Delta&space;t)\end{pmatrix}" /> <img src="https://latex.codecogs.com/svg.image?\large&space;,\&space;\mathbf{a_n}=\begin{pmatrix}&space;a_n(t_0)\\&space;a_n(t_0&plus;\Delta&space;t)\\&space;a_n(t_0&plus;2\Delta&space;t)\\&space;\\&space;a_n(t_0&plus;H\Delta&space;t)\end{pmatrix},&space;n\in&space;\mathcal{N}&space;" />
 <!-- 
-x_n=
+\mathbf{x_n}=
 \begin{pmatrix}
- x(t_0)\\
- x(t_0 +\Delta t)\\
- x(t_0+2\Delta t)\\
+ x_n(t_0)\\
+ x_n(t_0 +\Delta t)\\
+ x_n(t_0+2\Delta t)\\
  \cdot \cdot \cdot\\
- x(t_0+H\Delta t)
+ x_n(t_0+H\Delta t)
 \end{pmatrix}
-,v_n=
+,\mathbf{v_n}=
 \begin{pmatrix}
- v(t_0)\\
- v(t_0+\Delta t)\\
- v(t_0+2\Delta t)\\
+ v_n(t_0)\\
+ v_n(t_0+\Delta t)\\
+ v_n(t_0+2\Delta t)\\
  \cdot \cdot \cdot\\
- v(t_0+H\Delta t)
+ v_n(t_0+H\Delta t)
 \end{pmatrix}
 -->
 
