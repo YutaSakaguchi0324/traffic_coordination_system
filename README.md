@@ -91,7 +91,6 @@
 
 ### 目的関数
 最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
-
 従って、平均速度・燃費・車線変更の3つの評価軸の和を目的関数とする。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;minimize}\&space;f_{cost}=w_1f_1&space;&plus;&space;w_2f_2&space;&plus;&space;w_3f_3" />
