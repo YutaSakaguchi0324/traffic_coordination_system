@@ -117,6 +117,8 @@ $f_1$は速度$v_n$が理想速度$v_{\rm des}$から離れるほど値が大き
 $f_2$は速度変化が大きく加減速が多いほど値が大きくなる。
 車の燃費は加減速を繰り返すほど悪くなるため、加速度の分散で燃費を評価できる。
 
+
+
 車線変更リスク評価$f_3$は具体的には以下のように定式化される。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}&space;(\theta_p&space;\vee&space;\theta_q)&space;e^{-\alpha(x_p(t_h)&space;-&space;x_q(t_h))^2}" />
