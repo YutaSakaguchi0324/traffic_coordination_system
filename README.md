@@ -106,7 +106,9 @@
 
 $f_1$は速度$v_n$が理想速度$v_{\rm des}$から離れるほど値が大きくなる。
 理想速度から離れるほど渋滞を意味するので、交通の円滑さを評価できる。
+
 <br>
+
 燃費評価$f_2$は以下のように定式化される。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_2&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}a_n^2(t_h)" />
