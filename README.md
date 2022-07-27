@@ -51,12 +51,11 @@
 よって運転は物体の運動としてモデル化でき、時間$t$に対する車の位置、速度、加速度の関数で説明できる。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t),\&space;v_n(t),\&space;a_n(t),\&space;n\in&space;N" />
-ここで、$N$は最適化する車の集合
-
+ここで、$N$は最適化する車の集合である。
 
 しかし、これらの関数は連続量でありコンピュータで扱えないため、離散時間による時系列データに近似する。
 
-$x_n,\ v_n,\ a_n$はそれぞれ一台の車の位置、速度、加速度の時系列データである。
+<img src="https://latex.codecogs.com/svg.image?\large&space;x_n=\begin{pmatrix}&space;x(t_0)\\&space;x(t_0&space;&plus;\Delta&space;t)\\&space;x(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x(t_0&plus;H\Delta&space;t)\end{pmatrix},v_n=\begin{pmatrix}&space;v(t_0)\\&space;v(t_0&plus;\Delta&space;t)\\&space;v(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v(t_0&plus;H\Delta&space;t)\end{pmatrix},a_n=\begin{pmatrix}&space;a(t_0)\\&space;a(t_0&plus;\Delta&space;t)\\&space;a(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a(t_0&plus;H\Delta&space;t)\end{pmatrix},n\in&space;N" />
 
 ### 目的関数
 最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
