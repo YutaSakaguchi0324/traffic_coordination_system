@@ -55,33 +55,33 @@
 
 しかし、これらの関数は連続量でありコンピュータで扱えないため、離散時間による時系列データに近似する。
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{x_n}=\begin{pmatrix}&space;x_n(t_0)\\&space;x_n(t_0&space;&plus;\Delta&space;t)\\&space;x_n(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x_n(t_0&plus;H\Delta&space;t)\end{pmatrix},\&space;\mathbf{v_n}=\begin{pmatrix}&space;v_n(t_0)\\&space;v_n(t_0&plus;\Delta&space;t)\\&space;v_n(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v_n(t_0&plus;H\Delta&space;t)\end{pmatrix}" /> <img src="https://latex.codecogs.com/svg.image?\large&space;,\&space;\mathbf{a_n}=\begin{pmatrix}&space;a_n(t_0)\\&space;a_n(t_0&plus;\Delta&space;t)\\&space;a_n(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a_n(t_0&plus;H\Delta&space;t)\end{pmatrix},\&space;n\in\mathcal{N}&space;" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{x_n}=\begin{pmatrix}&space;x_n(t_0)\\&space;x_n(t_1)\\&space;x_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x_n(t_H)\end{pmatrix},\&space;\mathbf{v_n}=\begin{pmatrix}&space;v_n(t_0)\\&space;v_n(t_1)\\&space;v_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v_n(t_3)\end{pmatrix},\&space;\mathbf{a_n}=\begin{pmatrix}&space;a_n(t_0)\\&space;a_n(t_1)\\&space;a_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a_n(t_H)\end{pmatrix},\&space;n\in\mathcal{N}" />
+
+<img src="" />
 <!-- 
 \mathbf{x_n}=
 \begin{pmatrix}
  x_n(t_0)\\
- x_n(t_0 +\Delta t)\\
- x_n(t_0+2\Delta t)\\
+ x_n(t_1)\\
+ x_n(t_2)\\
  \cdot \cdot \cdot\\
- x_n(t_0+H\Delta t)
+ x_n(t_H)
 \end{pmatrix}
 ,\ \mathbf{v_n}=
 \begin{pmatrix}
  v_n(t_0)\\
- v_n(t_0+\Delta t)\\
- v_n(t_0+2\Delta t)\\
+ v_n(t_1)\\
+ v_n(t_2)\\
  \cdot \cdot \cdot\\
- v_n(t_0+H\Delta t)
+ v_n(t_3)
 \end{pmatrix}
--->
-<!-- 
 ,\ \mathbf{a_n}=
 \begin{pmatrix}
  a_n(t_0)\\
- a_n(t_0+\Delta t)\\
- a_n(t_0+2\Delta t)\\
+ a_n(t_1)\\
+ a_n(t_2)\\
  \cdot \cdot \cdot\\
- a_n(t_0+H\Delta t)
+ a_n(t_H)
 \end{pmatrix}
 ,\ n\in\mathcal{N}
 -->
