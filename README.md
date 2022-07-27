@@ -98,9 +98,7 @@ $\mathcal{N}$は最適化する車の集合である。
 
 ここで、$f_1$は速度評価関数、$f_2$は燃費評価関数、$f_3$は車線変更リスク評価関数であり、$w1,\ w2,\ w3$はそれぞれの重み付け(定数)である。
 
-<br>
-
-速度評価$f_1$は以下のように定式化される。
+- 速度評価$f_1$
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_1=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}(v_n(t_h)&space;-&space;v_{\rm&space;des})^2" />
 <!-- f_1= \sum_{h=1}^H \sum_{n\in\mathcal{N}}(v_n(t_h) - v_{\rm des})^2 -->
@@ -108,9 +106,7 @@ $\mathcal{N}$は最適化する車の集合である。
 $f_1$は速度$v_n$が理想速度$v_{\rm des}$から離れるほど値が大きくなる。
 理想速度から離れるほど渋滞を意味するので、交通の円滑さを評価できる。
 
-<br>
-
-燃費評価$f_2$は以下のように定式化される。
+- 燃費評価
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_2&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}a_n^2(t_h)" />
 <!-- f_2 = \sum_{h=1}^H \sum_{n\in\mathcal{N}}a_n^2(t_h) -->
@@ -120,7 +116,7 @@ $f_2$は速度変化が大きく加減速が多いほど値が大きくなる。
 
 <br>
 
-車線変更リスク評価$f_3$は具体的には以下のように定式化される。
+- 車線変更リスク評価$f_3$
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}&space;(\theta_p&space;\vee&space;\theta_q)&space;e^{-\alpha(x_p(t_h)&space;-&space;x_q(t_h))^2}" />
 <!-- f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} (\theta_p \vee \theta_q) e^{-\alpha(x_p(t_h) - x_q(t_h))^2} -->
