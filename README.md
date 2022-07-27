@@ -55,8 +55,9 @@
 
 しかし、これらの関数は連続量でありコンピュータで扱えないため、離散時間による時系列データに近似する。
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;x_n=\begin{pmatrix}&space;x(t_0)\\&space;x(t_0&space;&plus;\Delta&space;t)\\&space;x(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x(t_0&plus;H\Delta&space;t)\end{pmatrix},v_n=\begin{pmatrix}&space;v(t_0)\\&space;v(t_0&plus;\Delta&space;t)\\&space;v(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v(t_0&plus;H\Delta&space;t)\end{pmatrix},a_n=\begin{pmatrix}&space;a(t_0)\\&space;a(t_0&plus;\Delta&space;t)\\&space;a(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a(t_0&plus;H\Delta&space;t)\end{pmatrix},n\in&space;N" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;x_n=\begin{pmatrix}&space;x(t_0)\\&space;x(t_0&space;&plus;\Delta&space;t)\\&space;x(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x(t_0&plus;H\Delta&space;t)\end{pmatrix},v_n=\begin{pmatrix}&space;v(t_0)\\&space;v(t_0&plus;\Delta&space;t)\\&space;v(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v(t_0&plus;H\Delta&space;t)\end{pmatrix},a_n=\begin{pmatrix}&space;a(t_0)\\&space;a(t_0&plus;\Delta&space;t)\\&space;a(t_0&plus;2\Delta&space;t)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a(t_0&plus;H\Delta&space;t)\end{pmatrix}" />
 
+ここで、$\Delta t$は微小時間、$H$は時間ステップ数である。
 ### 目的関数
 最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
 
