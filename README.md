@@ -98,6 +98,8 @@ $\mathcal{N}$は最適化する車の集合である。
 
 ここで、$f_1$は速度評価関数、$f_2$は燃費評価関数、$f_3$は車線変更リスク評価関数であり、$w1,\ w2,\ w3$はそれぞれの重み付け(定数)である。
 
+<br>
+
 - 速度評価$f_1$
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_1=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}(v_n(t_h)&space;-&space;v_{\rm&space;des})^2" />
@@ -105,6 +107,8 @@ $\mathcal{N}$は最適化する車の集合である。
 
 $f_1$は速度$v_n$が理想速度$v_{\rm des}$から離れるほど値が大きくなる。
 理想速度から離れるほど渋滞を意味するので、交通の円滑さを評価できる。
+
+<br>
 
 - 燃費評価
 
