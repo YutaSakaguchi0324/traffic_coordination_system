@@ -97,7 +97,7 @@
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;minimize}\&space;f_{cost}=w_1f_1&space;&plus;&space;w_2f_2&space;&plus;&space;w_3f_3" />
 <!-- {\rm minimize}\ f_{cost}=w_1f_1 + w_2f_2 + w_3f_3 -->
 
-ここで、$f_1$は速度評価関数、$f_2$は燃費評価関数、$f_3$は車線変更リスク評価関数であり、$w1,\ w2,\ w3$はそれぞれの重み付け(スカラー)である。
+ここで、$f_1$は速度評価関数、$f_2$は燃費評価関数、$f_3$は車線変更リスク評価関数であり、$w1,\ w2,\ w3$はそれぞれの重み付け(定数)である。
 
 速度評価$f_1$は以下のように定式化される。
 
