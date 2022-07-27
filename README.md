@@ -55,7 +55,7 @@
 
 しかし、これらの関数は連続量でありコンピュータで扱えないため、離散時間による時系列データに近似する。
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{x_n}=\begin{pmatrix}&space;x_n(t_0)\\&space;x_n(t_1)\\&space;x_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x_n(t_H)\end{pmatrix},\&space;\mathbf{v_n}=\begin{pmatrix}&space;v_n(t_0)\\&space;v_n(t_1)\\&space;v_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v_n(t_3)\end{pmatrix},\&space;\mathbf{a_n}=\begin{pmatrix}&space;a_n(t_0)\\&space;a_n(t_1)\\&space;a_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a_n(t_H)\end{pmatrix},\&space;n\in\mathcal{N}" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{x_n}=\begin{pmatrix}&space;x_n(t_0)\\&space;x_n(t_1)\\&space;x_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x_n(t_H)\end{pmatrix},\&space;\mathbf{v_n}=\begin{pmatrix}&space;v_n(t_0)\\&space;v_n(t_1)\\&space;v_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v_n(t_H)\end{pmatrix},\&space;\mathbf{a_n}=\begin{pmatrix}&space;a_n(t_0)\\&space;a_n(t_1)\\&space;a_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a_n(t_H)\end{pmatrix},\&space;n\in\mathcal{N}" />
 <!-- 
 \mathbf{x_n}=
 \begin{pmatrix}
@@ -71,7 +71,7 @@
  v_n(t_1)\\
  v_n(t_2)\\
  \cdot \cdot \cdot\\
- v_n(t_3)
+ v_n(t_H)
 \end{pmatrix}
 ,\ \mathbf{a_n}=
 \begin{pmatrix}
@@ -85,8 +85,8 @@
 -->
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t_h&space;=&space;t_0&space;&plus;&space;h\Delta&space;t" />
 
-
 ここで、$\Delta t$は微小時間、$H$は時間ステップ数である。
+
 ### 目的関数
 最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
 
@@ -107,10 +107,10 @@ $f_1,\ f_2,\ f_3$は具体的には以下のように定式化される。
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}&space;w_3&space;\cdot&space;(\theta_p&space;\vee&space;\theta_q)&space;e^{-\alpha(x_p(t)&space;-&space;x_q(t))^2}" />
 <!-- f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} w_3 \cdot (\theta_p \vee \theta_q) e^{-\alpha(x_p(t) - x_q(t))^2} -->
 
-<img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t&space;=&space;t_0&space;&plus;&space;h&space;\Delta&space;t" />
+<img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t_h&space;=&space;t_0&space;&plus;&space;h\Delta&space;t" />
 <!-- t = t_0 + h \Delta t -->
 
-$\Delta t$は微小時間、$H$は時間ステップ数である。
+ここで、$\Delta t$は微小時間、$H$は時間ステップ数である。
 
 $f_1$は速度$v_n$が理想速度$v_{\rm des}$から離れるほど値が大きくなる。
 理想速度から離れるほど渋滞を意味するので、交通の円滑さを評価できる。
