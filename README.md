@@ -47,7 +47,6 @@
 
 ### 最適化したい変数
 最適化したい対象は時間経過に伴う車の動きである。
-
 よって運転は物体の運動としてモデル化でき、時間$t$に対する車の位置、速度、加速度の関数で説明できる。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t),\&space;v_n(t),\&space;a_n(t),\&space;n\in\mathcal{N}" />
