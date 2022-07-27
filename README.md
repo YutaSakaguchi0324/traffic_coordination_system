@@ -162,7 +162,6 @@ $f_3$は車線変更する車とそれ以外の車の車間距離が開くほど
 <br>
 
 交通シミュレーションでは、先行車の速度や車間距離から安全が確保できる加速度を計算するモデルが存在する。そのモデルで計算される速度以下であれば、前方車と衝突しないことが保証される。
-
 車追従モデルには様々なモデルがあるが、今回はIDM(intelligent driver model)というモデルを使った。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;cfm}&space;=&space;a_{\rm&space;max}\left&space;(&space;1&space;-&space;\left(\frac{v_f}{v_{\rm&space;des}}&space;\right)^4&space;-&space;\left(\frac{s}{g}\right)^2&space;\right&space;)" />
