@@ -95,7 +95,7 @@ $f_2$ は速度変化が大きく加減速が多いほど値が大きくなる�
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}&space;(\theta_p&space;\vee&space;\theta_q)&space;e^{-\alpha(x_p(t_h)&space;-&space;x_q(t_h))^2}" />
 <!-- f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} (\theta_p \vee \theta_q) e^{-\alpha(x_p(t_h) - x_q(t_h))^2} -->
 
-ここで、 $\mathcal{P}$ は二車線道路の内右車線の車の集合で、 $\mathcal{Q}$ は左車線の車の集合である。
+ここで、 $\mathcal{P}$ は二車線道路上の右車線の車の集合で、 $\mathcal{Q}$ は左車線の車の集合である。
 
 $f_3$ は車線変更する車とそれ以外の車の車間距離が開くほど値が小さくなることを意味する。
 車線変更の危険度が横の車との車間距離の正規分布に従うと仮定して評価している。
