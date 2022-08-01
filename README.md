@@ -128,8 +128,10 @@ $f_3$ は車線変更する車とそれ以外の車の車間距離が開くほ�
 先行車と衝突しないことを示す制約である。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;\leq&space;&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
+
 ここで、 $x_l,\ v_l$ は先行車の位置と速度、 $x_f,\ v_f$ はその追従車の位置と速度である。
 <!-- a_f \leq  a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
+
 <br>
 
 交通シミュレーションでは、先行車の速度や車間距離から安全が確保できる加速度を計算するモデルが存在する。そのモデルで計算される速度以下であれば、前方車と衝突しないことが保証される。
