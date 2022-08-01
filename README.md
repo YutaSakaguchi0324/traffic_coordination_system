@@ -115,7 +115,7 @@ $f_3$ は車線変更する車とそれ以外の車の車間距離が開くほ�
 
 - 速度・加速度制限
 
-現実の交通規則による速度制限・加速度制限
+現実の交通規則による速度制限・加速度制限である。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;v_{\rm&space;min}&space;\leq&space;v_n(t)&space;\leq&space;v_{\rm&space;max}&space;&space;" />
 <!-- v_{\rm min} \leq v_n(t) \leq v_{\rm max}  -->
