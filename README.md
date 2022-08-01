@@ -56,7 +56,7 @@ $\mathcal{N}$は最適化する車の集合である。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{x_n}=\begin{pmatrix}&space;x_n(t_0)\\&space;x_n(t_1)\\&space;x_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x_n(t_H)\end{pmatrix},\&space;\mathbf{v_n}=\begin{pmatrix}&space;v_n(t_0)\\&space;v_n(t_1)\\&space;v_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v_n(t_H)\end{pmatrix}" /> <img src="https://latex.codecogs.com/svg.image?\large&space;,\&space;\mathbf{a_n}=\begin{pmatrix}&space;a_n(t_0)\\&space;a_n(t_1)\\&space;a_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a_n(t_H)\end{pmatrix},\&space;n\in\mathcal{N}" />
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t_h&space;=&space;t_0&space;&plus;&space;h\Delta&space;t" />
-ここで、$\Delta t$は微小時間、$H$は時間ステップ数である。
+ここで、 $\Delta t$ は微小時間、 $H$ は時間ステップ数である。
 
 ### 目的関数
 最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
@@ -66,7 +66,7 @@ $\mathcal{N}$は最適化する車の集合である。
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;minimize}\&space;f_{cost}=w_1f_1&space;&plus;&space;w_2f_2&space;&plus;&space;w_3f_3" />
 <!-- {\rm minimize}\ f_{cost}=w_1f_1 + w_2f_2 + w_3f_3 -->
 
-ここで、$f_1$は速度評価関数、$f_2$は燃費評価関数、$f_3$は車線変更リスク評価関数であり、$w1,\ w2,\ w3$はそれぞれの重み付け(定数)である。
+ここで、 $f_1$ は速度評価関数、 $f_2$ は燃費評価関数、 $f_3$ は車線変更リスク評価関数であり、 $w1,\ w2,\ w3$ はそれぞれの重み付け(定数)である。
 
 <br>
 
