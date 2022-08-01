@@ -70,7 +70,7 @@ $\mathcal{N}$は最適化する車の集合である。
 
 <br>
 
-- 速度評価$f_1$
+- 速度評価 $f_1$
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_1=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}(v_n(t_h)&space;-&space;v_{\rm&space;des})^2" />
 <!-- f_1= \sum_{h=1}^H \sum_{n\in\mathcal{N}}(v_n(t_h) - v_{\rm des})^2 -->
