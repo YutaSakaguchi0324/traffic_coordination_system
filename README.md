@@ -75,29 +75,29 @@ $\mathcal{N}$は最適化する車の集合である。
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_1=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}(v_n(t_h)&space;-&space;v_{\rm&space;des})^2" />
 <!-- f_1= \sum_{h=1}^H \sum_{n\in\mathcal{N}}(v_n(t_h) - v_{\rm des})^2 -->
 
-$f_1$は速度$v_n$が理想速度$v_{\rm des}$から離れるほど値が大きくなる。
+$f_1$ は速度$v_n$が理想速度$v_{\rm des}$から離れるほど値が大きくなる。
 理想速度から離れるほど渋滞を意味するので、交通の円滑さを評価できる。
 
 <br>
 
-- 燃費評価
+- 燃費評価 $f_2$
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_2&space;=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}a_n^2(t_h)" />
 <!-- f_2 = \sum_{h=1}^H \sum_{n\in\mathcal{N}}a_n^2(t_h) -->
 
-$f_2$は速度変化が大きく加減速が多いほど値が大きくなる。
+$f_2$ は速度変化が大きく加減速が多いほど値が大きくなる。
 車の燃費は加減速を繰り返すほど悪くなるため、加速度の分散で燃費を評価できる。
 
 <br>
 
-- 車線変更リスク評価$f_3$
+- 車線変更リスク評価 $f_3$
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}&space;(\theta_p&space;\vee&space;\theta_q)&space;e^{-\alpha(x_p(t_h)&space;-&space;x_q(t_h))^2}" />
 <!-- f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} (\theta_p \vee \theta_q) e^{-\alpha(x_p(t_h) - x_q(t_h))^2} -->
 
-ここで、$\mathcal{P}$は二車線道路の内右車線の車の集合で、$\mathcal{Q}$は左車線の車の集合である。
+ここで、$\mathcal{P}$ は二車線道路の内右車線の車の集合で、$\mathcal{Q}$は左車線の車の集合である。
 
-$f_3$は車線変更する車とそれ以外の車の車間距離が開くほど値が小さくなることを意味する。
+$f_3$ は車線変更する車とそれ以外の車の車間距離が開くほど値が小さくなることを意味する。
 車線変更の危険度が横の車との車間距離の正規分布に従うと仮定して評価している。
 
 ### 制約条件
