@@ -87,7 +87,7 @@ $\mathcal{N}$は最適化する車の集合である。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t_h&space;=&space;t_0&space;&plus;&space;h\Delta&space;t" />
 
-ここで、$\Delta t$は微小時間、$H$は時間ステップ数である。
+ここで、$$\Delta t$$は微小時間、$H$は時間ステップ数である。
 
 ### 目的関数
 最適化の目的は、平均速度を高く維持して燃費を低く抑えながら、車線変更する車に十分な車間距離を空けることである。
