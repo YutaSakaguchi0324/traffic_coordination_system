@@ -56,6 +56,7 @@ $\mathcal{N}$は最適化する車の集合である。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;\mathbf{x_n}=\begin{pmatrix}&space;x_n(t_0)\\&space;x_n(t_1)\\&space;x_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;x_n(t_H)\end{pmatrix},\&space;\mathbf{v_n}=\begin{pmatrix}&space;v_n(t_0)\\&space;v_n(t_1)\\&space;v_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;v_n(t_H)\end{pmatrix}" /> <img src="https://latex.codecogs.com/svg.image?\large&space;,\&space;\mathbf{a_n}=\begin{pmatrix}&space;a_n(t_0)\\&space;a_n(t_1)\\&space;a_n(t_2)\\&space;\cdot&space;\cdot&space;\cdot\\&space;a_n(t_H)\end{pmatrix},\&space;n\in\mathcal{N}" />
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t_h&space;=&space;t_0&space;&plus;&space;h\Delta&space;t" />
+
 ここで、 $\Delta t$ は微小時間、 $H$ は時間ステップ数である。
 
 ### 目的関数
@@ -75,7 +76,7 @@ $\mathcal{N}$は最適化する車の集合である。
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_1=&space;\sum_{h=1}^H&space;\sum_{n\in\mathcal{N}}(v_n(t_h)&space;-&space;v_{\rm&space;des})^2" />
 <!-- f_1= \sum_{h=1}^H \sum_{n\in\mathcal{N}}(v_n(t_h) - v_{\rm des})^2 -->
 
-$f_1$ は速度$v_n$が理想速度$v_{\rm des}$から離れるほど値が大きくなる。
+$f_1$ は速度 $v_n$ が理想速度 $v_{\rm des}$ から離れるほど値が大きくなる。
 理想速度から離れるほど渋滞を意味するので、交通の円滑さを評価できる。
 
 <br>
@@ -95,7 +96,7 @@ $f_2$ は速度変化が大きく加減速が多いほど値が大きくなる�
 <img src="https://latex.codecogs.com/svg.image?\large&space;f_3&space;=&space;\sum_{h=1}^H&space;\sum_{p\in\mathcal{P}}&space;\sum_{q\in\mathcal{Q}}&space;(\theta_p&space;\vee&space;\theta_q)&space;e^{-\alpha(x_p(t_h)&space;-&space;x_q(t_h))^2}" />
 <!-- f_3 = \sum_{h=1}^H \sum_{p\in\mathcal{P}} \sum_{q\in\mathcal{Q}} (\theta_p \vee \theta_q) e^{-\alpha(x_p(t_h) - x_q(t_h))^2} -->
 
-ここで、$\mathcal{P}$ は二車線道路の内右車線の車の集合で、$\mathcal{Q}$は左車線の車の集合である。
+ここで、 $\mathcal{P}$ は二車線道路の内右車線の車の集合で、 $\mathcal{Q}$ は左車線の車の集合である。
 
 $f_3$ は車線変更する車とそれ以外の車の車間距離が開くほど値が小さくなることを意味する。
 車線変更の危険度が横の車との車間距離の正規分布に従うと仮定して評価している。
@@ -103,7 +104,7 @@ $f_3$ は車線変更する車とそれ以外の車の車間距離が開くほ�
 ### 制約条件
 - 運動条件
 
-運動の微分方程式より、$x_n,\ v_n,\ a_n$の関係は以下の式に定式化される。
+運動の微分方程式より、 $x_n,\ v_n,\ a_n$ の関係は以下の式に定式化される。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;x_n(t&plus;\Delta&space;t)&space;=&space;x_n(t)&space;&plus;&space;v_n(t)\Delta&space;t" />
 <!-- x_n(t+\Delta t) = x_n(t) + v_n(t)\Delta t, -->
@@ -126,7 +127,7 @@ $f_3$ は車線変更する車とそれ以外の車の車間距離が開くほ�
 先行車と衝突しないことを示す制約である。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;\leq&space;&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
-ここで、$x_l,\ v_l$は先行車の位置と速度、$x_f,\ v_f$はその追従車の位置と速度である。
+ここで、 $x_l,\ v_l$ は先行車の位置と速度、 $x_f,\ v_f$ はその追従車の位置と速度である。
 <!-- a_f \leq  a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
 <br>
 
