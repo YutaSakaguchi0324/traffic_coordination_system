@@ -130,16 +130,11 @@ $f_3$ は車線変更する車とそれ以外の車の車間距離が開くほ�
 先行車と衝突しないことを示す制約である。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_f&space;\leq&space;&space;a_{\rm&space;cfm}(x_l,\&space;x_f,\&space;v_l,\&space;v_f)" />
-
-ここで、 $x_l,\ v_l$ は先行車の位置と速度、 $x_f,\ v_f$ はその追従車の位置と速度である。
 <!-- a_f \leq  a_{\rm cfm}(x_l,\ x_f,\ v_l,\ v_f) -->
 
-<br>
+ここで、 $x_l,\ v_l$ は先行車の位置と速度、 $x_f,\ v_f$ はその追従車の位置と速度である。 $a_{\rm cfm}$ は車追従モデルで計算される加速度である。
 
-交通シミュレーションでは、先行車の速度や車間距離から安全が確保できる加速度を計算するモデルが存在する。そのモデルで計算される加速度 $a_{cfm}$ 以下であれば、前方車と衝突しないことが保証される。
-車追従モデルには様々なモデルがあるが、今回はIDM(intelligent driver model)というモデルを使った。
-
-
+交通シミュレーションでは、先行車の速度や車間距離から安全が確保できる加速度を計算するモデルが存在する。そのモデルで計算される加速度 $a_{cfm}$ 以下であれば、前方車と衝突しないことが保証される。車追従モデルには様々なモデルがあるが、今回はIDM(intelligent driver model)というモデルを使った。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;cfm}&space;=&space;a_{\rm&space;max}\left&space;(&space;1&space;-&space;\left(\frac{v_f}{v_{\rm&space;des}}&space;\right)^4&space;-&space;\left(\frac{s}{g}\right)^2&space;\right&space;)" />
 <!-- a_{\rm cfm} = a_{\rm max}\left ( 1 - \left(\frac{v_f}{v_{\rm des}} \right)^4 - \left(\frac{s}{g}\right)^2 \right ), -->
