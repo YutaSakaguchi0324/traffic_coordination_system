@@ -87,6 +87,8 @@ $\mathcal{N}$は最適化する車の集合である。
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;{\rm&space;where\&space;with}\&space;t_h&space;=&space;t_0&space;&plus;&space;h\Delta&space;t" />
 
+
+$t$
 ここで、$$\Delta t$$は微小時間、$H$は時間ステップ数である。
 
 ### 目的関数
