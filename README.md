@@ -111,6 +111,8 @@ $f_3$ は車線変更する車とそれ以外の車の車間距離が開くほ�
 <img src="https://latex.codecogs.com/svg.image?\large&space;v_n(t&plus;\Delta&space;t)&space;=&space;v_n(t)&space;&plus;&space;a_n(t)\Delta&space;t" />
 <!-- v_n(t+\Delta t) = v_n(t) + a_n(t)\Delta t, -->
 
+<br>
+
 - 速度・加速度制限
 
 現実の交通規則による速度制限・加速度制限である。
@@ -120,6 +122,8 @@ $f_3$ は車線変更する車とそれ以外の車の車間距離が開くほ�
 
 <img src="https://latex.codecogs.com/svg.image?\large&space;a_{\rm&space;min}&space;\leq&space;a_n(t)&space;\leq&space;&space;a_{\rm&space;max}&space;" />
 <!-- a_{\rm min} \leq a_n(t) \leq  a_{\rm max} -->
+
+<br>
 
 - 衝突回避制約
 
