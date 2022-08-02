@@ -166,4 +166,4 @@ $f_3$ は車線変更する車とそれ以外の車の車間距離が開くほ�
 <img src="https://latex.codecogs.com/svg.image?\large&space;s&space;=&space;g_{\rm&space;min}&space;&plus;&space;v_f&space;T&space;&plus;&space;\frac{v_f(v_f&space;-&space;v_l)}{2\sqrt{|a_{\rm&space;max}&space;a_{\rm&space;min}}|}" />
 <!-- s = g_{\rm min} + v_f T + \frac{v_f(v_f - v_l)}{2\sqrt{|a_{\rm max} a_{\rm min}}|}, -->
 
-$l$ は車の長さで、 $g_{\rm min}$ は最小車間距離である。
+$l$ は車の長さで、 $g_{\rm min}$ は最小車間距離、 $T$ は
