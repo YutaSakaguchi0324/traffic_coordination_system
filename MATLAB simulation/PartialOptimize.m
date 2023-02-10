@@ -229,10 +229,10 @@ classdef PartialOptimize
             end
             distance = risk_matrix .* distance;
             EXP = exp(-alpha*distance.^2);
-            k = reshape(sum(position(2:T+1, :), 2), 1, 1, []);
-            EXP = k .* risk_matrix .* EXP;
-            
+            k = reshape(mean(position(2:T+1, :) + 200, 2), 1, 1, []);
+            EXP = 2*k .* risk_matrix .* EXP;
             risk_evaluation = sum(EXP, 'all');
+            
             value = w1*velocity_evaluation + w2*accel_evaluation + w3*risk_evaluation;
             
             %{

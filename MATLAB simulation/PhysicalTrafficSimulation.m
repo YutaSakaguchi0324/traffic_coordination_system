@@ -20,10 +20,15 @@ classdef PhysicalTrafficSimulation
         inserted_vehicle_count %一度に挿入される車の台数
         insert_times %挿入する回数
         insert_time_interval %挿入されるまでの間隔
+        sp
+        er
         
         %交通環境
         road_start %2車線道路の始まり(合流地点)
         road_length %2車線道路の長さ(分岐地点)
+        
+        %その他
+        delta_v_threshold %車が停止したとみなす速度
         
     end
     
@@ -49,14 +54,19 @@ classdef PhysicalTrafficSimulation
             obj.inserted_vehicle_count = settings.inserted_vehicle_count;
             obj.insert_times = settings.insert_times;
             obj.insert_time_interval = settings.insert_time_interval;
+            obj.sp = settings.sp;
+            obj.er = settings.er;
             
             %交通環境変数
             obj.road_start = settings.road_start;
             obj.road_length = settings.road_length;
+            
+            %その他
+            obj.delta_v_threshold = settings.delta_v_threshold;
         end
         
         %ランダム配列の作成
-        function r = generate_random_array(obj, sp, er, repetitions)
+        function r = generate_random_array(obj, repetitions)
             %ランダム四次元配列を生成する
             N = obj.inserted_vehicle_count;
             T = obj.insert_times;
@@ -71,8 +81,8 @@ classdef PhysicalTrafficSimulation
                 n = N+1;
             end
             array = zeros(2, n);
-            array(2, :) = er;
-            array = array + sp*[0:n-1];
+            array(2, :) = obj.er;
+            array = array + obj.sp*[0:n-1];
             
             random_position = -3 + 6*rand(N, T, repetitions);
             random_array(:, :, 2, :) = random_position - 200 + array(1:N)';
@@ -100,6 +110,7 @@ classdef PhysicalTrafficSimulation
         end
         
         %車列を挿入する
+        %stateの再構成
         function [r1, r2] = insert_vehicles(obj, insert_information)
             t = insert_information.t;
             r = insert_information.r;
@@ -110,7 +121,14 @@ classdef PhysicalTrafficSimulation
             if rem(t, obj.insert_time_interval) == 0 && count <= obj.insert_times
                 addition = random_array(:, count, :, r);
                 addition = reshape(addition, obj.inserted_vehicle_count, []);
-                state_variable = [state_variable addition'];
+                addition = addition';
+                if size(state_variable, 2) > 0
+                    if state_variable(2, end-1) <= -200 - obj.sp
+                        distance = state_variable(2, end-1) + 200 + obj.sp;
+                        addition(2, :) = addition(2, :) + distance - 5;
+                    end
+                end
+                state_variable = [state_variable addition];
                 
                 count = count + 1;
             end
@@ -119,7 +137,8 @@ classdef PhysicalTrafficSimulation
             r2 = state_variable;
         end
         
-        %車追従モデル関数
+        % 車追従モデル関数
+        % 純粋関数なのでこのままで良い
         function r = car_following_model(obj, x_leader, x_control, v_leader, v_control)
             %入力引数は配列でも可
             if isempty(x_control) && isempty(v_control)
@@ -168,8 +187,6 @@ classdef PhysicalTrafficSimulation
             Vmin = obj.Vmin;
             Amin = obj.Amin;
             road_length = obj.road_length;
-            %停止車両閾値
-            delta_v_threshold = 2.6;
             
             for i = 1:size(state, 2)
                 %前方の車とぶつからないようにする
@@ -204,7 +221,7 @@ classdef PhysicalTrafficSimulation
                 end
                 
                 %停止した車に道を譲る
-                stop_vehicle = other_state(:, other_state(3, :) < delta_v_threshold);
+                stop_vehicle = other_state(:, other_state(3, :) < obj.delta_v_threshold);
                 if size(stop_vehicle, 2) == 0
                     next_velocity3 = obj.car_following_model([], xc, [], vc);
                 else
@@ -249,7 +266,8 @@ classdef PhysicalTrafficSimulation
             r = next_state;
         end
         
-        %車線変更ができるか判定する
+        % 車線変更ができるか判定する
+        % 純粋関数なのでこのままで良い
         function r = lane_change_possible(obj, surroundings)
             %インスタンス変数
             dt = obj.dt;     
@@ -300,7 +318,8 @@ classdef PhysicalTrafficSimulation
             r = bool;
         end
         
-        %車線変更するべきか決める
+        % 車線変更するべきか決める
+        % 純粋関数なのでこのままで良い
         function r = lane_change_model(obj, surroundings)
             %車線変更モデルMOBILをつかう
             %入力引数

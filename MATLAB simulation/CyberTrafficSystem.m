@@ -25,6 +25,9 @@ classdef CyberTrafficSystem
         %交通環境
         road_start %2車線道路の始まり(合流地点)
         road_length %2車線道路の長さ(分岐地点)
+        
+        %その他
+        delta_v_threshold
     end
     
     methods
@@ -50,6 +53,8 @@ classdef CyberTrafficSystem
             
             obj.road_start = settings.road_start;
             obj.road_length = settings.road_length;
+            
+            obj.delta_v_threshold = settings.delta_v_threshold;
         end
 
         %車追従モデル関数(推定値)
@@ -104,10 +109,8 @@ classdef CyberTrafficSystem
             Amin = obj.Amin;
             road_length = obj.road_length;
             
-            %停止車両閾値
-            delta_v_threshold = 2.6;
-            
             for i = 1:size(state, 2)
+                %前方の車とぶつからないようにする
                 if i == 1
                     if size(leader_state, 2) == 0
                         xl = [];
@@ -116,14 +119,13 @@ classdef CyberTrafficSystem
                         xl = leader_state(2);
                         vl = leader_state(3);
                     end
-                    xc = state(2, i);
-                    vc = state(3, i);
                 else
                     xl = state(2, i-1);
-                    xc = state(2, i);
                     vl = state(3, i-1);
-                    vc = state(3, i);
                 end
+                
+                xc = state(2, i);
+                vc = state(3, i);
 
                 next_velocity1 = max([0, vc + Amin*dt, obj.car_following_model(xl, xc, vl, vc)]);
                 
@@ -131,7 +133,7 @@ classdef CyberTrafficSystem
                 if state(6, i) == 1
                     if state(5, 1) == 0
                         play = 0;
-                    else
+                    elseif state(5, 1) == 1
                         play = 15;
                     end
                     next_velocity2 = obj.car_following_model(road_length - play, xc, 0,  vc);
@@ -140,7 +142,7 @@ classdef CyberTrafficSystem
                 end
                 
                 %停止した車に道を譲る
-                stop_vehicle = other_state(:, other_state(3, :) < delta_v_threshold);
+                stop_vehicle = other_state(:, other_state(3, :) < obj.delta_v_threshold);
                 if size(stop_vehicle, 2) == 0
                     next_velocity3 = obj.car_following_model([], xc, [], vc);
                 else
@@ -192,8 +194,8 @@ classdef CyberTrafficSystem
 
             state = reshape(state, 7, N, []);
             A_state = state(:, :, state(2, 1, :) >= obj.road_length - 200);
-            B_state = state(:, :, state(2, 1, :) >= -200 & state(2, 1, :) < obj.road_length - 200);
-            C_state = state(:, :, state(2, 1, :) < -200);
+            B_state = state(:, :, state(2, N, :) >= -200 & state(2, 1, :) < obj.road_length - 200);
+            C_state = state(:, :, state(2, N, :) < -200);
             
             A_state = reshape(A_state, 7, [], 1);
             B_state = reshape(B_state, 7, [], 1);

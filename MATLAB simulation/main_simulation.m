@@ -11,7 +11,8 @@ traffic_settings.dt = 0.5; %シミュレーションの最小単位時間
 %車の挿入についての変数
 traffic_settings.inserted_vehicle_count = 12; %挿入する車の台数
 traffic_settings.insert_times = 8;
-traffic_settings.insert_time_interval = 55;
+traffic_settings.insert_time_interval = 40; %これにdtをかけた値になることに注意
+%12s:24, 13s:26, 15s:30, 17s:34, 20s:40
 
 %車変数
 traffic_settings.vehicle_length = 5; %車の長さ
@@ -25,19 +26,25 @@ traffic_settings.Amin = -2; %最小加速度
 
 %環境変数
 traffic_settings.road_start = 0;
-traffic_settings.road_length = 800;
+traffic_settings.road_length = 500;
 
 %最適化に関する変数
-traffic_settings.time_horizon = 5;
+traffic_settings.time_horizon = 3;
 traffic_settings.optimize_interval = 1;
-traffic_settings.group_vehicle_count = 2;
-traffic_settings.alpha = 0.001;
-traffic_settings.w1 = 0.005; %速度評価係数
-traffic_settings.w2 = 0.01; %加速度評価係数
-traffic_settings.w3 = 0.002; %リスク評価係数
+traffic_settings.group_vehicle_count = 4;
+traffic_settings.alpha = 0.01;%0.001
+traffic_settings.w1 = 0.1; %速度評価係数 0.1
+traffic_settings.w2 = 1; %加速度評価係数 1
+traffic_settings.w3 = 0.2; %リスク評価係数 0.3
+
+traffic_settings.sp = -50; %12s:30 13s:33.75 15s:37 17s:42 19s:47 20s:50 21s:52 23s:58 25s:62 27s:67 30s:74
+traffic_settings.er = -7;%-10
+
+%その他の変数
+traffic_settings.delta_v_threshold = 2;%2.6
 
 %変数を決める
-simulation_time = 1000;
+simulation_time = 1200;
 R = rem(simulation_time, traffic_settings.optimize_interval);
 simulation_time = simulation_time - R;
 repetitions = 10;
@@ -45,13 +52,8 @@ repetitions = 10;
 %% ランダム配列を作る
 PTS = PhysicalTrafficSimulation(traffic_settings);
 
-sp = -70;%40s:50m 45s:57m 50s:63m 55s:70m
-er = -14;%40s:10m 45s:11.4m 50s:12.6m 55s:14m
-
-%{
-random_array = PTS.generate_random_array(sp, er, repetitions);
+random_array = PTS.generate_random_array(repetitions);
 save('10 times random array', 'random_array')
-%}
 
 load('10 times random array', 'random_array')
 %% 人間交通モデル(従来の手法)
@@ -157,9 +159,10 @@ for r = 1:repetitions
         end
     end
 end
+
 toc
 %% 結果を記録
 previous_time_series = permute(previous_time_series, [3 2 1 4]);
 proposed_time_series = permute(proposed_time_series, [3 2 1 4]);
 
-save('12 vehicles per 55 seconds', 'previous_time_series', 'proposed_time_series');
+save('12 vehicles per 20 seconds 2', 'previous_time_series', 'proposed_time_series');
